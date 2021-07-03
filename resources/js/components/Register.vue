@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container w-75">
     <form>
         <div class="form-group">
             <label>Name</label>
@@ -39,7 +39,8 @@ export default {
     methods: {
         saveForm(){
             axios.post('/api/register', this.form).then(() => {
-                console.log('saved')
+                console.log('register saved')
+                this.$router.push({name: 'Dashboard'})
             }).catch(error => {
                 this.errors = error.response.data.errors;
             })

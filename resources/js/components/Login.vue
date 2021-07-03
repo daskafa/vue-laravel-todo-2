@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container w-75">
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>

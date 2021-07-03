@@ -6,6 +6,11 @@
                 <li class="nav-item">
                     <router-link to="/" exact>Home</router-link>
                 </li>
+{{--                @if(\Illuminate\Support\Facades\Auth::check())--}}
+                    <li class="nav-item ml-3">
+                        <router-link to="/dashboard" exact>Dashboard</router-link>
+                    </li>
+{{--                @endif--}}
                 <li class="nav-item ml-3">
                     <router-link to="/about">About</router-link>
                 </li>
@@ -27,6 +32,7 @@
 
 <div>
     <router-view></router-view>
+
 </div>
 
 

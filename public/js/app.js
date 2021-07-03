@@ -2058,7 +2058,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('/api/register', this.form).then(function () {
-        console.log('saved');
+        console.log('register saved');
+
+        _this.$router.push({
+          name: 'Dashboard'
+        });
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
       });
@@ -38032,7 +38036,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    About Page\n")])
+  return _c("div", { staticClass: "container" }, [_vm._v("\n    About Page\n")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38100,7 +38104,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Home Page\n")])
+  return _c("div", { staticClass: "container" }, [_vm._v("\n    Home Page\n")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38125,7 +38129,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container w-75" }, [
     _c("form", [
       _c("div", { staticClass: "form-group" }, [
         _c("label", { attrs: { for: "exampleInputEmail1" } }, [
@@ -38264,7 +38268,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container w-75" }, [
     _c("form", [
       _c("div", { staticClass: "form-group" }, [
         _c("label", [_vm._v("Name")]),

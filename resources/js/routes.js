@@ -11,7 +11,7 @@ export default {
     linkActiveClass: 'font-semibold',
     routes: [
         {
-          path: '*',
+            path: '*',
             component: NotFound
         },
         {

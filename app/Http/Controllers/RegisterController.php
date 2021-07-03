@@ -12,7 +12,7 @@ class RegisterController extends Controller
         $request->validate([
            'name' => 'required|min:3',
            'email' => 'required|email|min:3|unique:users',
-            'password' => 'required|min:3|confirmed'
+           'password' => 'required|min:3|confirmed'
         ]);
 
         User::create([
