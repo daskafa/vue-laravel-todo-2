@@ -1,5 +1,4 @@
 import Home from './components/Home';
-import About from './components/About';
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
@@ -18,10 +17,6 @@ export default {
             path: '/',
             component: Home,
             name: 'Home'
-        },
-        {
-            path: '/about',
-            component: About
         },
         {
             path: '/login',

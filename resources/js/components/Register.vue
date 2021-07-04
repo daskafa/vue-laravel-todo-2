@@ -1,14 +1,13 @@
 <template>
 <div class="container w-75">
-    <form>
+    <form class="text-white">
         <div class="form-group">
             <label>Name</label>
             <input type="text" v-model="form.name" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group text-white">
             <label for="exampleInputEmail1">Email address</label>
             <input v-model="form.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>

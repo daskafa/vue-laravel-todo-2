@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        Home Page
+    <div class="container my-3">
+        <p class="text-white text-center">Home Page</p>
     </div>
 </template>
 

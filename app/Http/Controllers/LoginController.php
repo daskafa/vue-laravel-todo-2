@@ -18,7 +18,7 @@ class LoginController extends Controller
             return response()->json(Auth::user(), 200);
         }
         throw ValidationException::withMessages([
-           'email' => 'kimlik bilgileri hatalı'
+           'email' => 'Identity information is incorrect'
         ]);
     }
 

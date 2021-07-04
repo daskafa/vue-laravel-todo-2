@@ -1,60 +1,25 @@
 @extends('layouts.app')
 @section('content')
-    <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
-        <div class="container">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <router-link to="/" exact>Home</router-link>
-                </li>
-{{--                @if(\Illuminate\Support\Facades\Auth::check())--}}
-                    <li class="nav-item ml-3">
-                        <router-link to="/dashboard" exact>Dashboard</router-link>
-                    </li>
-{{--                @endif--}}
-                <li class="nav-item ml-3">
-                    <router-link to="/about">About</router-link>
+        <div class="container text-center w-25 mt-5 rounded-lg">
+            <ul>
+                <li>
+                    <router-link to="/dashboard" class="px-3 py-1 text-danger font-weight-bold rounded-sm text-decoration-none bg-white" exact>Dashboard</router-link>
                 </li>
             </ul>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-3">
-                        <router-link to="/login" exact>Login</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to="/register">Register</router-link>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li class="my-3"><router-link class="px-3 py-1 text-danger font-weight-bold rounded-sm text-decoration-none bg-white" to="/login" exact>Login</router-link></li>
+                <li><router-link class="px-3 py-1 text-danger font-weight-bold rounded-sm text-decoration-none bg-white" to="/register">Register</router-link></li>
+            </ul>
         </div>
-    </nav>
 
 
 <div>
     <router-view></router-view>
-
+{{--    <example-component></example-component>--}}
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-{{--<div>--}}
-{{--    <router-link to="/" exact>Home</router-link>--}}
-{{--    <router-link to="/about">About</router-link>--}}
-{{--</div>--}}
-{{--<div>--}}
-{{--    <router-link to="/login" exact>Login</router-link>--}}
-{{--    <router-link to="/register">Register</router-link>--}}
-{{--</div>--}}
-{{--<div>--}}
-{{--    <router-view></router-view>--}}
-{{--</div>--}}
+    <div class="text-center">
+        @if(\Illuminate\Support\Facades\Auth::check())
+        Auth var ve kullanıcı id'si : {{ \auth()->user()->id }}
+        @endif
+    </div>
 @endsection
